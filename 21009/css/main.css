@@ -1,0 +1,99 @@
+*{
+    padding: 0; margin: 0; box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul,li{
+    list-style: none;
+}
+
+.header{
+    width: 1000px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid;
+}
+
+.logo{
+    text-align: center;
+    width: 150px;
+    height: 100px;
+    line-height: 100px;
+    border: 1px solid;
+}
+
+.gnb{
+    width: 450px;
+    display: flex;
+    height: 225px;
+    margin: 30px;
+    padding: 30px;
+}
+
+.gnb>li{
+    width: 150px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    background-color: black;
+    z-index: 1;
+}
+
+.gnb>li:hover:not(.sub>li){
+    background-color: white;
+}
+
+.gnb>li>a{
+    color: white;
+    font-size: 18px;
+    display: block;
+}
+
+.gnb>li:hover:not(.sub>li)>a{
+    color: black;
+}
+
+.sub{
+    background-color: white;
+}
+
+.sub>li>a{
+    color: black;
+}
+
+.sub>li:hover{
+    background-color: black;
+}
+
+.sub>li:hover>a{
+    color: white;
+}
+
+.slide-box{
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide-box>ul>li>img{
+    display: block;
+}
+
+.slide-box>ul{
+    position: absolute;
+    animation: slide-box 10s linear infinite;
+}
+
+@keyframes slide-box{
+    0% {top: 0;}
+    30% {top: 0;}
+    35% {top: -300px;}
+    60% {top: -300px;}
+    75% {top: -600px;}
+    95% {top: -600px;}
+    100% {top: 0;}
+    }
